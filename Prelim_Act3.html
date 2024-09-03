@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Sheet</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&family=Nunito&display=swap" rel="stylesheet">
+   <link rel="stylesheet"  href="Prelim_Act3.css">
+</head>
+
+<body>
+    <div class="form-container">
+
+        <form>
+            <!-- Student's Name, Age, and Gender -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="studentName"><span class="icon">👦</span>Student's Name</label>
+                    <input type="text" class="form-control" id="studentName" placeholder="Enter your full name"
+                        required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="studentAge"><span class="icon">🎂</span>Age:</label>
+                    <input type="number" class="form-control" id="studentAge" min="1" placeholder="Age" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="studentGender"><span class="icon">👧/👦</span>Male/Female</label>
+                    <input type="text" class="form-control" id="gender" placeholder="Gender" required>
+                </div>
+            </div>
+
+            <!-- Birthdate and Address -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="birthdate"><span class="icon">📅</span>Birthdate:</label>
+                    <input type="date" class="form-control" id="birthdate" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="address"><span class="icon">🏠</span>Address:</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter your home address" required>
+                </div>
+            </div>
+
+            <!-- Guardian's Name and Religion -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="guardianName"><span class="icon">👨‍👩‍👧‍👦</span>Guardian's Name(s):</label>
+                    <input type="text" class="form-control" id="guardianName" placeholder="Enter guardian's name(s)"
+                        required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="religion"><span class="icon">🙏</span>Religion:</label>
+                    <input type="text" class="form-control" id="religion" placeholder="Enter religion" required>
+                </div>
+            </div>
+
+            <!-- Relationship to Student and Telephone -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="relationship"><span class="icon">👨‍👩‍👧</span>Relationship to student:</label>
+                    <select class="form-control" id="relationship" required>
+                        <option value="" disabled selected>Select Relationship</option>
+                        <option>Mother</option>
+                        <option>Father</option>
+                        <option>Guardian</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telephone"><span class="icon">📞</span>Telephone:</label>
+                    <input type="tel" class="form-control" id="telephone" placeholder="Enter telephone number" required>
+                </div>
+            </div>
+
+            <!-- Family Email and Contact Preference -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="familyEmail"><span class="icon">📧</span>Family Email:</label>
+                    <input type="email" class="form-control" id="familyEmail" placeholder="Enter family email" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="contactPreference"><span class="icon">📬</span>Best way to contact you:</label>
+                    <select class="form-control" id="contactPreference" required>
+                        <option value="" disabled selected>Select Preference</option>
+                        <option>Email</option>
+                        <option>Phone Call</option>
+                        <option>Text Message</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Emergency Contact Name and Telephone -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="emergencyContactName"><span class="icon">🚨</span>Emergency Contact Name:</label>
+                    <input type="text" class="form-control" id="emergencyContactName"
+                        placeholder="Enter emergency contact name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="emergencyContactPhone"><span class="icon">📞</span>Telephone:</label>
+                    <input type="tel" class="form-control" id="emergencyContactPhone"
+                        placeholder="Enter emergency contact number" required>
+                </div>
+            </div>
+
+            <!-- Mother's and Father's Name and Workplace -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="motherName"><span class="icon">👩‍🦰</span>Mother's Name:</label>
+                    <input type="text" class="form-control" id="motherName" placeholder="Enter mother's name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="motherWorkplace"><span class="icon">🏢</span>Workplace:</label>
+                    <input type="text" class="form-control" id="motherWorkplace" placeholder="Enter mother's workplace"
+                        required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fatherName"><span class="icon">👨‍🦰</span>Father's Name:</label>
+                    <input type="text" class="form-control" id="fatherName" placeholder="Enter father's name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fatherWorkplace"><span class="icon">🏢</span>Workplace:</label>
+                    <input type="text" class="form-control" id="fatherWorkplace" placeholder="Enter father's workplace"
+                        required>
+                </div>
+            </div>
+
+            <!-- Medical Issues/Allergies/Medication -->
+            <div class="form-group">
+                <label for="medicalIssues"><span class="icon">🩺</span>Medical Issues/Allergies/Medication:</label>
+                <textarea class="form-control" id="medicalIssues" rows="3"
+                    placeholder="List any medical issues, allergies, or medications" ></textarea>
+            </div>
+
+            <!-- Academic Challenges -->
+            <div class="form-group">
+                <label for="academicChallenges"><span class="icon">📚</span>Academic Challenges:</label>
+                <textarea class="form-control" id="academicChallenges" rows="3"
+                    placeholder="Describe any academic challenges"></textarea>
+            </div>
+
+            <!-- Device Information -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="deviceOwnership"><span class="icon">💻</span>Does your child have a device?</label>
+                    <select class="form-control" id="deviceOwnership" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="deviceType"><span class="icon">📱</span>What kind of device is your child using?</label>
+                    <input type="text" class="form-control" id="deviceType"
+                        placeholder="e.g., Laptop, Tablet, Smartphone">
+                </div>
+            </div>
+
+            <!-- Internet Issues -->
+            <div class="form-group">
+                <label for="internetIssues"><span class="icon">🌐</span>Do you have any issues with the
+                    internet?</label>
+                <textarea class="form-control" id="internetIssues" rows="2"
+                    placeholder="Describe any internet connectivity issues"></textarea>
+            </div>
+
+            <!-- Relatives in School -->
+            <div class="form-group">
+                <label for="relativesInSchool"><span class="icon">👨‍👩‍👧‍👦</span>Names of any relatives attending the
+                    school and grade they are in:</label>
+                <textarea class="form-control" id="relativesInSchool" rows="2"
+                    placeholder="List relatives and their respective grades"></textarea>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="date"><span class="icon">📅</span>Date:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">🎉 Submit Information 🎉</button>
+        </form>
+    </div>
+</body>
+
+</html>
