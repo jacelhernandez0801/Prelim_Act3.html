@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Information Sheet</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&family=Nunito&display=swap" rel="stylesheet">
-   <link rel="stylesheet"  href="Prelim_Act3.css">
+    <link rel="stylesheet" href="Prelim_Act3.css">
 </head>
 
 <body>
     <div class="form-container">
-
         <form>
             <!-- Student's Name, Age, and Gender -->
             <div class="form-row">
@@ -29,8 +28,19 @@
                     <input type="number" class="form-control" id="studentAge" min="1" placeholder="Age" required>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="studentGender"><span class="icon">👧/👦</span>Male/Female</label>
-                    <input type="text" class="form-control" id="gender" placeholder="Gender" required>
+                    <label><span class="icon">👦/👧</span>Gender</label>
+                    <div class="gender-options">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male"
+                                required>
+                            <label class="form-check-label" for="genderMale">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female"
+                                required>
+                            <label class="form-check-label" for="genderFemale">Female</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -90,6 +100,7 @@
                         <option>Email</option>
                         <option>Phone Call</option>
                         <option>Text Message</option>
+                        <option>Messenger</option>
                         <option>Other</option>
                     </select>
                 </div>
@@ -137,7 +148,7 @@
             <div class="form-group">
                 <label for="medicalIssues"><span class="icon">🩺</span>Medical Issues/Allergies/Medication:</label>
                 <textarea class="form-control" id="medicalIssues" rows="3"
-                    placeholder="List any medical issues, allergies, or medications" ></textarea>
+                    placeholder="List any medical issues, allergies, or medications"></textarea>
             </div>
 
             <!-- Academic Challenges -->
@@ -146,51 +157,69 @@
                 <textarea class="form-control" id="academicChallenges" rows="3"
                     placeholder="Describe any academic challenges"></textarea>
             </div>
-
             <!-- Device Information -->
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="deviceOwnership"><span class="icon">💻</span>Does your child have a device?</label>
-                    <select class="form-control" id="deviceOwnership" required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </select>
+                    <label><span class="icon">💻</span>Does your child have a device?</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="deviceOwnership" id="deviceYes"
+                                value="Yes" required>
+                            <label class="form-check-label" for="deviceYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="deviceOwnership" id="deviceNo" value="No"
+                                required>
+                            <label class="form-check-label" for="deviceNo">No</label>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="form-group col-md-6">
-                    <label for="deviceType"><span class="icon">📱</span>What kind of device is your child using?</label>
-                    <input type="text" class="form-control" id="deviceType"
-                        placeholder="e.g., Laptop, Tablet, Smartphone">
+                    <label for="deviceType"><span class="icon">📱</span> What kind of device is your child
+                        using?</label>
+                    <select class="form-control" id="deviceType">
+                        <option value="" disabled selected>Select Device Type</option>
+                        <option>Computer</option>
+                        <option>Laptop</option>
+                        <option>Tablet</option>
+                        <option>Smartphone</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
             </div>
 
             <!-- Internet Issues -->
             <div class="form-group">
-                <label for="internetIssues"><span class="icon">🌐</span>Do you have any issues with the
-                    internet?</label>
+                <label for="internetIssues"><span class="icon">🌐</span>Any internet connectivity issues?</label>
                 <textarea class="form-control" id="internetIssues" rows="2"
-                    placeholder="Describe any internet connectivity issues"></textarea>
+                    placeholder="Describe any internet issues"></textarea>
             </div>
 
-            <!-- Relatives in School -->
+
+
             <div class="form-group">
-                <label for="relativesInSchool"><span class="icon">👨‍👩‍👧‍👦</span>Names of any relatives attending the
-                    school and grade they are in:</label>
-                <textarea class="form-control" id="relativesInSchool" rows="2"
+                <label for="relatives"><span class="icon">👨‍👩‍👧‍👦</span> Names of any relatives attending the school
+                    and grade they are in:</label>
+                <textarea class="form-control" id="relatives" rows="3"
                     placeholder="List relatives and their respective grades"></textarea>
             </div>
 
-            <!-- Date -->
             <div class="form-group">
-                <label for="date"><span class="icon">📅</span>Date:</label>
-                <input type="date" class="form-control" id="date" required>
+                <label for="date"><span class="icon">📅</span> Date:</label>
+                <input type="date" id="date" class="form-control" placeholder="dd/mm/yyyy">
             </div>
 
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">🎉 Submit Information 🎉</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
