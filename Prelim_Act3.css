@@ -109,8 +109,6 @@ select:focus {
     outline: none;
 }
 
-
-
 .btn-primary {
     background-color: #ff6f61;
     border: none;
@@ -142,9 +140,9 @@ body::before {
 
 textarea {
     resize: none;
-
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .form-container::before {
         font-size: 24px;
@@ -174,3 +172,110 @@ textarea {
         right: 5px;
     }
 }
+
+/* Hide the default radio buttons */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Custom radio button style */
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+}
+
+/* Create a custom radio button */
+input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ff6f61;
+    background-color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checkmark for the selected radio button */
+input[type="radio"]:checked + label::before {
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+}
+
+/* Inner dot for the selected radio button */
+input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* On hover, change the border color */
+input[type="radio"] + label:hover::before {
+    border-color: #e64a19;
+}
+
+/* Flexbox container for gender options */
+.gender-options {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjusting the spacing between the radio buttons */
+.gender-options .form-check {
+    margin-right: 15px; /* Adjust this value as needed */
+}
+
+.form-container .form-group.date-group {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.date-group label {
+    display: inline-block;
+    width: auto;
+}
+
+.date-group input {
+    width: 100%;
+    max-width: 300px; /* Adjust the width according to your preference */
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
