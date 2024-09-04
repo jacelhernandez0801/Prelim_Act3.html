@@ -1,6 +1,5 @@
 body {
     background-image: url("backgroundImage.jpg");
-    background-color: #fce4ec;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -172,6 +171,7 @@ textarea {
         right: 5px;
     }
 }
+
 
 /* Hide the default radio buttons */
 input[type="radio"] {
